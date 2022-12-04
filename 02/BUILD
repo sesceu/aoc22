@@ -1,8 +1,14 @@
-load("@rules_rust//rust:defs.bzl", "rust_binary")
+load("@rules_rust//rust:defs.bzl", "rust_binary", "rust_library", "rust_test")
 
 filegroup(
     name = "input_data",
     data = ["input.txt"],
+)
+
+rust_library(
+    name = "day_02_lib",
+    srcs = ["day_02_lib.rs"],
+    edition = "2018",
 )
 
 rust_binary(
@@ -10,5 +16,5 @@ rust_binary(
     srcs = ["main.rs"],
     data = [":input_data"],
     edition = "2018",
-    deps = [],
+    deps = [":day_02_lib"],
 )
