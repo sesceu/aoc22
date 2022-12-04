@@ -18,3 +18,10 @@ rust_binary(
     edition = "2018",
     deps = [":day_02_lib"],
 )
+
+rust_test(
+    name = "day_02_tests",
+    srcs = ["day_02_tests.rs"],
+    edition = "2018",
+    deps = [":day_02_lib"],
+)

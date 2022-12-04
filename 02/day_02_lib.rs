@@ -1,4 +1,4 @@
-use std::io::{Error};
+pub(crate) use std::io::Error;
 
 const INVALID_OWN_SHAPE_ERROR: &str = "Invalid own shape character!";
 const INVALID_OTHER_SHAPE_ERROR: &str = "Invalid other shape character!";
