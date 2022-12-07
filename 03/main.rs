@@ -2,7 +2,6 @@ use std::fs::File;
 use std::io::{BufRead, BufReader, Error};
 
 fn main() -> Result<(), Error> {
-    // The input file containing the strategy guide.
     let input_file = File::open("./03/input.txt").expect("Failed to open `input.txt`!");
     let buffered = BufReader::new(input_file);
 
